@@ -2,10 +2,17 @@
   <p>
     Usuario:<%= @user.name %><br>
     Email:<%= @user.email %><br>
+    <div>
+      <form action="/users/<%= @user.id %>/edit" method="GET">
+        <input id="chulada_btn" type="submit" value="Cambiar Password">
+      </form>
+    </div>  
   </p>
 
-  <div>
-    <form action="/users/<%= @user.id %>/edit" method="GET">
-      <input type="submit" value="Editar">
-    </form>
+
+  <div id="question_submit">
+    <form action="/new_question/<%= @user.id %>" method="POST">
+      <textarea name="question[body]" placeholder="Pregunta!"></textarea><br>
+      <input id="chulada_btn" type="submit" value="Preguntar">
+    <end>
   </div>
