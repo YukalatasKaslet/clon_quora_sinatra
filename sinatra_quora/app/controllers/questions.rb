@@ -1,16 +1,11 @@
 #CREATE
 post '/new_question/:user_id' do
-  p "***" * 50
-  p params
   question = Question.create(params[:question])
-  p question
   user = User.find(params[:user_id])
-  p user
   if user && question
     user.questions << question
     redirect to("/question/#{question.id}")
   else
-    p "*Post*" * 50
     redirect to('/Error')
   end
 end
@@ -21,9 +16,13 @@ get '/question/:id' do
   if @question != nil
     erb :'question/question'
   else
-    p "*Get*" * 50
     redirect to('/Error')
   end
+end
+
+get 'question/show_all' do
+  @questions = Question.all
+  erb :'question/_show_all'
 end
 
 #UPDATE
@@ -46,5 +45,5 @@ end
 delete '/question/:id' do
   question = Question.find(params[:id])
   question.destroy
-  redirect to ("/users/#{question.users.id}")
+  redirect to ("/users/#{current_user.id}")
 end

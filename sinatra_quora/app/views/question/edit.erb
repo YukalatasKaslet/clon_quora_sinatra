@@ -1,0 +1,14 @@
+Usuario:<%= current_user.name %><br>
+<h1>Editar Pregunta</h1>
+   <form action="/question/<%= @question.id %>" method="POST" >
+    <input type="hidden" name="_method" value="PUT">
+    <textarea name="question[body]" placeholder="Pregunta!"></textarea><br>
+    <input id="chulada_btn" type="submit" value="Editame!">    
+   </form>
+
+<div>
+    <form action="/question/<%= @question.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input id="chulada_btn" type="submit" value="Borrar!">
+    </form>
+</div>
