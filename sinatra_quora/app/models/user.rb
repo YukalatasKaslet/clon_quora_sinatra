@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   include BCrypt
   # Remember to create a migration!
+  has_many :questions
   validates :name, :password, presence: true
   validates :email, presence: true, uniqueness: true
 
