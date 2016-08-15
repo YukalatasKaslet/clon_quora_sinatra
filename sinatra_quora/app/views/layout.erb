@@ -19,9 +19,9 @@
 <body>
   <div class="container">
     <% if current_user %>
-      <a href="/logout">Logout</a><br>
+      <a id="login_sing" href="/logout">Logout</a><br>
     <% else %>
-      <a href="/login">Login</a> | <a href="/signup">Signup</a><br>
+      <a id="login_sing" href="/login">Login</a> | <a id="login_sing" href="/signup">Signup</a><br>
     <%end%>
     <%= yield %>
   </div>

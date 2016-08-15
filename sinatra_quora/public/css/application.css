@@ -53,9 +53,74 @@ th {
 }
 
 #show_all_questions {
-  display: none;
+  display: none; /* para que permanezca oculto hasta usarlo */
 }
 
 #show, #hide {
   cursor: pointer;
 }
+
+/*
+a:link - a normal, unvisited link
+a:visited - a link the user has visited
+a:hover - a link when the user mouses over it
+a:active - a link the moment it is clicked
+*/
+
+/* Para cualquier link */
+a{
+  font-family: monospace;
+  font-size: 1.3em;
+  color: #9607FF;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9670FF;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+a:active {
+    color: white;
+    background-color: #9670FF;
+    text-decoration: underline;
+}
+
+
+/* links de preguntas */
+#body_question_link{
+  font-family: monospace;
+  font-size: 1em;
+  color: black;
+}
+
+#login_sing{
+  font-size: 2.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
