@@ -1,0 +1,45 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+th {
+  text-align: left;
+}
+
+/* Código Lau */
+#question_submit {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-bottom: 60px;
+  margin-right: auto;
+  width: 90%;
+  height: 30%;
+  background-color: #9607FF;
+  background: linear-gradient(rgba(150,7,255,0.4), #FFFFFF); /* Standard syntax */
+  border-radius: 5px;
+}
+
+#question_submit form textarea {
+  
+  margin: 15px 10px;
+  width: 95%;
+  height: 20%;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+#chulada_btn {
+  border-radius: 5px;
+  border: 1px solid #9670FF;
+  text-decoration: none;
+  text-align: center;
+  /* background: linear-gradient(rgba(150,7,255,0.2), rgba(255,255,255,0.3), rgba(255,255,255,1)); */
+  color: #330099;
+  background: transparent;
+  /* lilita #9670FF */
+  /* verde claritoup  #50FF90*/
+  /* background: linear-gradient(#FFFFFF, rgba(150,112,255,0.4)); */
+
+}

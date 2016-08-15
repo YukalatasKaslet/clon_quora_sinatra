@@ -1,0 +1,9 @@
+
+Usuario:<%= current_user.name %><br>
+<p>
+  <%= @question.body %>
+</p>
+<form action="/question/<%= @question.id %>/edit" method="GET">
+    <input id="chulada_btn" type="submit" value="Editar">
+</form>   
+
