@@ -1,0 +1,14 @@
+<p>
+  HOLA
+</p>
+<div id="show_all_questions">
+<% if @questions %>
+  <% @questions.each do |q| %>
+    <p>
+      <a href="/question/<%= q.id %>/edit">
+        <%= q.body %>
+      </a>
+    </p>
+  <% end %>
+<% end %>
+</div>

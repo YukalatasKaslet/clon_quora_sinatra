@@ -1,9 +1,17 @@
 
 Usuario:<%= current_user.name %><br>
+<a href="/users/<%= current_user.id %>">Volver al Perfil</a>
+<br>
 <p>
   <%= @question.body %>
 </p>
-<form action="/question/<%= @question.id %>/edit" method="GET">
-    <input id="chulada_btn" type="submit" value="Editar">
-</form>   
+<br>
+  <form action="/question/<%= @question.id %>/edit" method="GET">
+      <input class="chulada_btn" type="submit" value="Editar">
+  </form>   
 
+  <form action="/question/<%= @question.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input class="chulada_btn" type="submit" value="Borrar!">
+  </form>
+<div id="clear"></div>

@@ -1,21 +1,22 @@
 <strong>Bienvenido </strong>
-  <p>
-    Usuario:<%= @user.name %><br>
-    Email:<%= @user.email %><br>
-    <div>
-      <form action="/users/<%= @user.id %>/edit" method="GET">
-        <input id="chulada_btn" type="submit" value="Cambiar Password">
-      </form>
-    </div>  
-  </p>
-
-
-  <div id="question_submit">
-    <form action="/new_question/<%= @user.id %>" method="POST">
-      <textarea name="question[body]" placeholder="Pregunta!"></textarea><br>
-      <input id="chulada_btn" type="submit" value="Preguntar">
-    <end>
-  </div>
-
+<p>
+  Usuario:<%= current_user.name %><br>
+  Email:<%= current_user.email %><br>
   <div>
-  </div>
+    <form action="/users/<%= current_user.id %>/edit" method="GET">
+      <input class="chulada_btn" type="submit" value="Cambiar Password">
+    </form>
+  </div>  
+</p>
+<div id="clear"></div>
+<div id="question_submit">
+  <form action="/new_question/<%= current_user.id %>" method="POST">
+    <textarea name="question[body]" placeholder="Pregunta!"></textarea><br>
+    <input class="chulada_btn" type="submit" value="Preguntar">
+  <end>
+</div>
+<div id="clear"></div>
+<p id="show" class="chulada_btn"> Mostrar todas las preguntas </p>
+<p id="hide" class="chulada_btn"></p>
+<br>
+<%= erb :'question/_show_all', :layout => false %>

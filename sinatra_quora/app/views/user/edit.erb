@@ -1,19 +1,19 @@
-<h1>Editar Usuario</h1>
-   <form action="/users/<%= @user.id %>" method="POST" >
-    <input type="hidden" name="_method" value="PUT">
-    Email:<br>
-    <input type="text"      name="user[email]"><br>
-    Password:<br>
-    <input type="password"  name="user[password]"><br>
-    New password:<br>
-    <input type="password"  name="user[new_password]"><br>
-    <input id="chulada_btn" type="submit" value="Editame!">    
-   </form>
+<h1>Editar Usuario</h1><br>
+<a href="/users/<%= current_user.id %>">Volver al Perfil</a>
+<br>
+<form action="/users/<%= @user.id %>" method="POST" >
+  <input type="hidden" name="_method" value="PUT">
+  Email:<br>
+  <input type="text"      name="user[email]"><br>
+  Password:<br>
+  <input type="password"  name="user[password]"><br>
+  New password:<br>
+  <input type="password"  name="user[new_password]"><br>
+  <input class="chulada_btn" type="submit" value="Editame!">    
+</form>
 
-
-  <div>
-    <form action="/users/<%= @user.id %>" method="POST">
-      <input type="hidden" name="_method" value="DELETE">
-      <input id="chulada_btn" type="submit" value="Borrar!">
-    </form>
-  </div>
+<form action="/users/<%= @user.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input class="chulada_btn" type="submit" value="Borrame :(">
+</form>
+<div id="clear"></div>

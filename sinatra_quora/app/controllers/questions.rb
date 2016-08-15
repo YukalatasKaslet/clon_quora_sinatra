@@ -21,8 +21,9 @@ get '/question/:id' do
 end
 
 get 'question/show_all' do
-  @questions = Question.all
-  erb :'question/_show_all'
+  #@questions = Question.all
+  #erb :'question/_show_all'
+  redirect to ("/users/#{current_user.id}")
 end
 
 #UPDATE
