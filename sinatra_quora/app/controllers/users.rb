@@ -32,7 +32,7 @@ end
 
 get '/users/:id' do
   @user = User.find(params[:id])
-  @questions = Question.all
+  @questions = @user.questions
   erb :'user/profile'
 end
 

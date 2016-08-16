@@ -1,0 +1,11 @@
+<div>
+<% if @answers %>
+  <% @answers.each do |a| %>
+    <p>
+      <a id="body_question_link" href="/answer/<%= a.id %>">
+        <%= a.body %>
+      </a>
+    </p>
+  <% end %>
+<% end %>
+</div>

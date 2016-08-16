@@ -2,7 +2,7 @@
 <% if @questions %>
   <% @questions.each do |q| %>
     <p>
-      <a id="body_question_link" href="/question/<%= q.id %>/edit">
+      <a id="body_question_link" href="/question/<%= q.id %>">
         <%= q.body %>
       </a>
     </p>

@@ -16,7 +16,7 @@ th {
  }
 
 
-#question_submit {
+#form_submit {
   margin-top: 40px;
   margin-left: auto;
   margin-bottom: 60px;
@@ -28,7 +28,7 @@ th {
   border-radius: 5px; 
 } 
 
-#question_submit form textarea {
+#form_submit form textarea {
   
   margin: 15px 10px;
   width: 95%;

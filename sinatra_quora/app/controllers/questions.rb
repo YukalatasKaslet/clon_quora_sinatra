@@ -11,19 +11,22 @@ post '/new_question/:user_id' do
 end
 
 #READ
+=begin
+get 'question/_show_all' do
+  @questions = Question.all
+  #erb :'question/_show_all'
+  erb :index
+end
+=end
+
 get '/question/:id' do
   @question = Question.find(params[:id])
+  @answers  = @question.answers
   if @question != nil
     erb :'question/question'
   else
     redirect to('/Error')
   end
-end
-
-get 'question/show_all' do
-  #@questions = Question.all
-  #erb :'question/_show_all'
-  redirect to ("/users/#{current_user.id}")
 end
 
 #UPDATE

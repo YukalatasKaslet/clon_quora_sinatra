@@ -1,9 +1,10 @@
-
+<% if current_user %>
 Usuario:<%= current_user.name %><br>
 <a href="/users/<%= current_user.id %>">Volver al Perfil</a>
+<% end %>
 <br>
 <p>
-  <%= @question.body %>
+  <strong><%= @question.body %></strong>
 </p>
 <br>
   <form action="/question/<%= @question.id %>/edit" method="GET">
@@ -15,3 +16,11 @@ Usuario:<%= current_user.name %><br>
     <input class="chulada_btn" type="submit" value="Borrar!">
   </form>
 <div id="clear"></div>
+<br>
+<div id="form_submit">
+  <form action="/new_answer/<%= @question.id %>" method="POST">
+    <textarea name="answer[body]" placeholder="Responde!"></textarea><br>
+    <input class="chulada_btn" type="submit" value="Responder">
+  <end>
+</div>
+<%= erb :'answer/_show_all', :layout => false %>

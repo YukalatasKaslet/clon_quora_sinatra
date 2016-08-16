@@ -1,4 +1,12 @@
   <h1>Bienvenido a Sinatra!</h1>
-  <p>Este es un esqueleto de sinatra que armamos para ti</p>
-
-  
+  <p>Esta es la imitación de la funcionalidad de Quora</p>
+<br> 
+<% if @questions %>
+  <% @questions.each do |q| %>
+    <p>
+      <a id="body_question_link" href="/question/<%= q.id %>">
+        <%= q.body %>
+      </a>
+    </p>
+  <% end %>
+<% end %>
